@@ -36,3 +36,5 @@ dependencies:
     version: v1.0.6
   - src: andrewrothstein.git
     version: v3.0.1
+  - src: andrewrothstein.curl
+    version: v1.0.3
