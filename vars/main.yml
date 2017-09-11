@@ -1,0 +1,7 @@
+---
+# vars file for opam
+opam_bin: opam-{{opam_ver}}-{{opam_platform}}
+opam_url: '{{opam_mirror}}/{{opam_ver}}/{{opam_bin}}'
+opam_target: '{{opam_install_dir}}/{{opam_bin}}'
+opam_link: '{{opam_install_dir}}/opam'
+opam_checksum: '{{opam_checksums[opam_platform]}}'

@@ -1,0 +1,12 @@
+---
+# defaults file for opam
+opam_mirror: https://github.com/ocaml/opam/releases/download
+opam_ver: '1.2.2'
+opam_platform: x86_64-Linux
+opam_checksums:
+  x86_64-Linux: sha256:888d6258c533f6e1afd274773ea536f602daa4f8cd47fe0699f17027d294dfed
+
+opam_init: True
+opam_ocaml_ver: '4.05.0'
+
+opam_install_dir: /usr/local/bin

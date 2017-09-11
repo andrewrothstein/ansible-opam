@@ -1,0 +1,24 @@
+---
+- name: download...
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{opam_url}}'
+    dest: '{{opam_target}}'
+    mode: 0755
+
+- name: link....
+  become: yes
+  become_user: root
+  file:
+    src: '{{opam_target}}'
+    dest: '{{opam_link}}'
+    state: link
+
+- name: initializing...
+  become: yes
+  become_user: root
+  when: opam_init
+  command: /usr/local/bin/opam init -y --comp {{opam_ocaml_ver}}
+  args:
+    creates: '{{ansible_env.HOME}}/.opam'
