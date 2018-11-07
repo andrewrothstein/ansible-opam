@@ -1,7 +1,7 @@
 ---
 # defaults file for opam
 opam_mirror: https://github.com/ocaml/opam/releases/download
-opam_ver: '2.0.0'
+opam_ver: '2.0.1'
 opam_platform: x86_64
 opam_os: linux
 opam_checksums:
@@ -12,6 +12,14 @@ opam_checksums:
     x86_64-darwin: sha256:f25a98ff5a45bd2ad7ce1b9496503c505ca8cd38525dcd11be04b9203e54cbff
     x86_64-linux: sha256:45a9fc261639745dca57e936aba35e33fe723a46276db2493a017e964f7e7646
     x86_64-openbsd: sha256:b67a5904cb89f36ac7886867769f9accc0d8a1845808f2db547a0c0c716593c9
+  '2.0.1':
+    arm64-linux: sha256:08c889476612f10b3f9b3aac8a3463dad423cf5a6ccff1ba47e7762cb0a3d0f9
+    armhf-linux: sha256:3e3004e649c0359066fd298ac92465453cffc33ac9094e3fe6c8d8d1dfbe3e2a
+    i686-linux: sha256:02910dc9016540b892656d14ee377211a819cfd9a4a45308453204bd2669786b
+    x86_64-darwin: sha256:5231050058cccf794b05229b7d294da7cef667cd40561cd12948f46b883464fd
+    x86_64-linux: sha256:be0e5d59d2b1cab7325976942bcbd4513e2d95dbab2c987dfc7d0c45de0f60de
+    x86_64-openbsd: sha256:311cf92cba2add7c5ac85b072b334943ca535c41cbe6f727f32e076d5cb1a028
+
 
 opam_init: True
 opam_ocaml_ver: '4.06.1'
