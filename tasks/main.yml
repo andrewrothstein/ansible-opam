@@ -3,20 +3,20 @@
   become: yes
   become_user: root
   get_url:
-    url: '{{opam_url}}'
-    dest: '{{opam_target}}'
+    url: '{{ opam_url }}'
+    dest: '{{ opam_target }}'
     mode: 0755
 
 - name: link....
   become: yes
   become_user: root
   file:
-    src: '{{opam_target}}'
-    dest: '{{opam_link}}'
+    src: '{{ opam_target }}'
+    dest: '{{ opam_link }}'
     state: link
 
 - name: initializing...
   when: opam_init
-  command: '{{opam_link}} init -y --comp {{opam_ocaml_ver}}'
+  command: '{{ opam_link }} init -y --comp {{ opam_ocaml_ver }}'
   args:
-    creates: '{{ansible_env.HOME}}/.opam'
+    creates: '{{ ansible_env.HOME }}/.opam'
