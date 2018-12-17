@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=2.0.1
+VER=2.0.2
 DIR=~/Downloads
 MIRROR=https://github.com/ocaml/opam/releases/download/$VER
 
