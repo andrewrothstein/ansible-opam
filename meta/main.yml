@@ -1,44 +1,42 @@
----
+dependencies:
+- role: andrewrothstein.unarchive-deps
+  version: v1.0.12
+- role: andrewrothstein.bash
+  version: v1.1.1
+- role: andrewrothstein.alpine-glibc-shim
+  version: v2.0.7
+- role: andrewrothstein.gcc-toolbox
+  version: v1.0.9
+- role: andrewrothstein.git
+  version: v3.0.2
+- role: andrewrothstein.curl
+  version: v1.0.3
 galaxy_info:
   author: Andrew Rothstein
-  description: installs opam
   company: Core Dump
+  description: installs opam
+  galaxy_tags:
+  - development
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: Archlinux
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-  galaxy_tags:
-    - development
-
-dependencies:
-  - src: andrewrothstein.unarchive-deps
-    version: v1.0.10
-  - src: andrewrothstein.bash
-    version: v1.1.1
-  - src: andrewrothstein.alpine-glibc-shim
-    version: v2.0.7
-  - src: andrewrothstein.gcc-toolbox
-    version: v1.0.9
-  - src: andrewrothstein.git
-    version: v3.0.2
-  - src: andrewrothstein.curl
-    version: v1.0.3
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: Archlinux
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
