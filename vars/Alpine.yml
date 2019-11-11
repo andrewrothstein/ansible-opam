@@ -1,0 +1,4 @@
+---
+opam_os_pkgs:
+  - bubblewrap
+  - rsync
