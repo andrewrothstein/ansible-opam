@@ -31,7 +31,4 @@ dl_ver() {
     dl $ver x86_64 openbsd
 }
 
-dl_ver 2.0.5
-dl_ver 2.0.6
 dl_ver ${1:-2.0.7}
-
