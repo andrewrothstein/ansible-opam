@@ -2,3 +2,14 @@
 - hosts: all
   roles:
     - role: '{{ playbook_dir }}'
+  tasks:
+    - command: /usr/local/bin/opam --version
+      register: opam_test_output
+    - name: opam --version
+      debug:
+        msg: '{{ opam_test_output.stdout }}'
+    - command: /usr/local/bin/opam list
+      register: opam_list_output
+    - name: opam list
+      debug:
+        msg: '{{ opam_list_output.stdout }}'
