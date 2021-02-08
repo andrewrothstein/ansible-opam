@@ -15,7 +15,8 @@
   package:
     name: '{{ opam_os_pkgs | default([]) }}'
     state: present
-- name: download...
+
+- name: downloading {{ opam_url }} to {{ opam_target }}...
   become: yes
   become_user: root
   get_url:
@@ -23,7 +24,7 @@
     dest: '{{ opam_target }}'
     mode: 0755
 
-- name: link....
+- name: linking {{ opam_link }} to {{ opam_target }}
   become: yes
   become_user: root
   file:
