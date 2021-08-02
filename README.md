@@ -1,6 +1,6 @@
 andrewrothstein.opam
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-opam.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-opam)
+![Build Status](https://github.com/andrewrothstein/ansible-opam/actions/workflows/build.yml/badge.svg)
 
 Installs the [OCaml Package Manager](https://opam.ocaml.org/)
 
