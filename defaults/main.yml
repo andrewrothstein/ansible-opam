@@ -1,7 +1,7 @@
 ---
 # defaults file for opam
 opam_mirror: https://github.com/ocaml/opam/releases/download
-opam_ver: 2.0.8
+opam_ver: 2.1.0
 opam_platform: x86_64
 opam_os: linux
 opam_init: True
@@ -61,3 +61,16 @@ opam_checksums:
     x86_64-macos: sha256:5ced41c6c9600479ded32c36b4b44d67bd7da4eadbefdebfa17838e857abef97
     # https://github.com/ocaml/opam/releases/download/2.0.8/opam-2.0.8-x86_64-openbsd
     x86_64-openbsd: sha256:9254d29cc18d97a1826078597a264a77d268de7c3d508839cd64f30d06a3f156
+  '2.1.0':
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-arm64-linux
+    arm64-linux: sha256:e9ebeddafc45e59f23fec64430dc9e8a88f7108af5fb6a918d241e5178c02192
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-armhf-linux
+    armhf-linux: sha256:0f002834157d00f074f7ed6d7ff43e2309c6522618edc7b1ab62693cd4aa6b7f
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-i686-linux
+    i686-linux: sha256:6858c1bbfce99c23098d53584f29e0275e4caa98e843908c82371544834bed45
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-x86_64-linux
+    x86_64-linux: sha256:10c8def09368da9d2d6a6951363892fef117e168b2a4f8d288f366fe4140d01e
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-x86_64-macos
+    x86_64-macos: sha256:6aaa4b4bcfdffe849dc051c1094ac2d40c56567d8eadefe22f6c8ab616f7027c
+    # https://github.com/ocaml/opam/releases/download/2.1.0/opam-2.1.0-x86_64-openbsd
+    x86_64-openbsd: sha256:0ce7d2c4340ba5f99026e34d045aa49ffa6abb9e446b4e875b3c58c05bb7df03
