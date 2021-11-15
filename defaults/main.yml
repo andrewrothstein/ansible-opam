@@ -1,7 +1,7 @@
 ---
 # defaults file for opam
 opam_mirror: https://github.com/ocaml/opam/releases/download
-eopam_ver: 2.1.1
+opam_ver: 2.1.1
 opam_platform: x86_64
 opam_os: linux
 opam_init: true
