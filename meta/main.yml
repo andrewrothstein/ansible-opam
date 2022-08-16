@@ -1,16 +1,11 @@
+---
 dependencies:
-- role: andrewrothstein.unarchive-deps
-  version: v1.2.1
-- role: andrewrothstein.bash
-  version: v1.1.8
-- role: andrewrothstein.alpine-glibc-shim
-  version: v2.0.15
-- role: andrewrothstein.gcc-toolbox
-  version: v1.1.3
-- role: andrewrothstein.git
-  version: v3.1.3
-- role: andrewrothstein.curl
-  version: v1.0.10
+- andrewrothstein.unarchive-deps
+- andrewrothstein.bash
+- andrewrothstein.alpine-glibc-shim
+- andrewrothstein.gcc-toolbox
+- andrewrothstein.git
+- andrewrothstein.curl
 galaxy_info:
   author: Andrew Rothstein
   company: Core Dump
@@ -36,10 +31,10 @@ galaxy_info:
     - 8
   - name: Fedora
     versions:
-    - 34
-    - 35
+    - 36
+    - 37
   - name: Ubuntu
     versions:
     - bionic
     - focal
-
+    - jammy
