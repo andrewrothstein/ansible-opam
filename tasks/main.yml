@@ -23,7 +23,7 @@
   become: true
   become_user: root
   package:
-    name: '{{ opam_os_pkgs | default([]) }}'
+    name: '{{ opam_os_pkgs | default(["bubblewrap","diffutils","patch","rsync"]) }}'
     state: present
 
 - name: downloading {{ opam_url }} to {{ opam_target }}...
