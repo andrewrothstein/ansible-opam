@@ -3,11 +3,9 @@
   version: v1.2.4
 - name: andrewrothstein.bash
   version: v1.1.11
-- name: andrewrothstein.alpine-glibc-shim
-  version: v2.0.18
 - name: andrewrothstein.gcc-toolbox
-  version: v1.1.7
+  version: v1.1.9
 - name: andrewrothstein.git
-  version: v3.1.7
+  version: v3.2.2
 - name: andrewrothstein.curl
-  version: v1.0.15
+  version: v1.0.16

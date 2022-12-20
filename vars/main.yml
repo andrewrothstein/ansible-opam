@@ -1,6 +1,8 @@
 ---
 # vars file for opam
-opam_suffix: '{{ opam_platform }}-{{ opam_os }}'
+opam_os: '{{ opam_os_map[ansible_system] }}'
+opam_arch: '{{ opam_arch_map[ansible_architecture] }}'
+opam_suffix: '{{ opam_arch }}-{{ opam_os }}'
 opam_bin: opam-{{ opam_ver }}-{{ opam_suffix }}
 opam_url: '{{ opam_mirror }}/{{ opam_ver }}/{{ opam_bin }}'
 opam_target: '{{ opam_install_dir }}/{{ opam_bin }}'
