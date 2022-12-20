@@ -20,14 +20,14 @@
       paths:
         - '{{ role_path }}/vars'
 - name: install OS pkgs
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ opam_os_pkgs | default([]) }}'
     state: present
 
 - name: downloading {{ opam_url }} to {{ opam_target }}...
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ opam_url }}'
