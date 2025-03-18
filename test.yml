@@ -1,15 +1,20 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.opam
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/bin/opam --version
+    - name: Executing 'opam --version'
+      ansible.builtin.command: opam --version
+      changed_when: false
       register: opam_test_output
-    - name: opam --version
-      debug:
+    - name: Output from 'opam --version'
+      ansible.builtin.debug:
         msg: '{{ opam_test_output.stdout }}'
-    - command: /usr/local/bin/opam list
+    - name: Executing 'opam list'
+      ansible.builtin.command: opam list
+      changed_when: false
       register: opam_list_output
-    - name: opam list
-      debug:
+    - name: Output from 'opam list'
+      ansible.builtin.debug:
         msg: '{{ opam_list_output.stdout }}'

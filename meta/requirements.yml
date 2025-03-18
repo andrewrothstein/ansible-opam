@@ -1,11 +1,11 @@
 ---
-- name: andrewrothstein.unarchive-deps
-  version: v1.2.4
+- name: andrewrothstein.unarchivedeps
+  version: 2.0.2
 - name: andrewrothstein.bash
-  version: v1.1.11
-- name: andrewrothstein.gcc-toolbox
-  version: v1.1.9
+  version: v1.2.2
+- name: andrewrothstein.gcc_toolbox
+  version: 2.1.0
 - name: andrewrothstein.git
-  version: v3.2.2
+  version: v3.2.11
 - name: andrewrothstein.curl
-  version: v1.0.16
+  version: v1.1.2

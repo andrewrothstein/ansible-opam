@@ -4,28 +4,28 @@ galaxy_info:
   company: Core Dump
   description: installs opam
   galaxy_tags:
-  - development
-  license:
-  - MIT
-  min_ansible_version: 2.0
+    - development
+  license: MIT
+  min_ansible_version: '2.0'
+  namespace: andrewrothstein
   platforms:
-  - name: Archlinux
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - bullseye
-    - buster
-  - name: EL
-    versions:
-    - 8
-    - 9
-  - name: Fedora
-    versions:
-    - 36
-    - 37
-  - name: Ubuntu
-    versions:
-    - bionic
-    - focal
-    - jammy
+    - name: ArchLinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - bookworm
+        - bullseye
+    - name: EL
+      versions:
+        - '8'
+        - '9'
+    - name: Fedora
+      versions:
+        - '40'
+        - '41'
+    - name: Ubuntu
+      versions:
+        - jammy
+        - noble
+  role_name: opam

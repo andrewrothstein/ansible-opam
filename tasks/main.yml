@@ -1,16 +1,21 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchive-deps
-- include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
+    name: andrewrothstein.unarchivedeps
+- name: Installing andrewrothstein.bash
+  ansible.builtin.include_role:
     name: andrewrothstein.bash
-- include_role:
-    name: andrewrothstein.gcc-toolbox
-- include_role:
+- name: Installing andrewrothstein.gcc_toolbox
+  ansible.builtin.include_role:
+    name: andrewrothstein.gcc_toolbox
+- name: Installing andrewrothstein.git
+  ansible.builtin.include_role:
     name: andrewrothstein.git
-- include_role:
+- name: Installing andrewrothstein.curl
+  ansible.builtin.include_role:
     name: andrewrothstein.curl
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -19,31 +24,32 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: install OS pkgs
+- name: Installing OS pkgs
   become: true
   become_user: root
-  package:
-    name: '{{ opam_os_pkgs | default(["bubblewrap","diffutils","patch","rsync"]) }}'
+  ansible.builtin.package:
+    name: '{{ opam_os_pkgs }}'
     state: present
 
-- name: downloading {{ opam_url }} to {{ opam_target }}...
+- name: Downloading {{ opam_url }} to {{ opam_target }}...
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ opam_url }}'
     dest: '{{ opam_target }}'
-    mode: 0755
+    mode: '755'
 
-- name: linking {{ opam_link }} to {{ opam_target }}
-  become: yes
+- name: Linking {{ opam_link }} to {{ opam_target }}
+  become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ opam_target }}'
     dest: '{{ opam_link }}'
     state: link
 
-- name: initializing...
-  when: opam_init
-  command: '{{ opam_link }} init -y --comp {{ opam_ocaml_ver }}'
+- name: Initializing...
+  when: opam_init | bool
+  ansible.builtin.command: >-
+    {{- opam_link }} init -y --comp {{ opam_ocaml_ver }}
   args:
     creates: '{{ ansible_env.HOME }}/.opam'
